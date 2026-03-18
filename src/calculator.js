@@ -17,4 +17,15 @@ function divide(a, b) {
   return a / b;
 }
 
-module.exports = { add, subtract, multiply, divide };
+function power(a, b) {
+  return Math.pow(a, b);
+}
+
+function mod(a, b) {
+  if (b === 0) {
+    throw new Error("Modulo by zero");
+  }
+  return a % b;
+}
+
+module.exports = { add, subtract, multiply, divide, power, mod };

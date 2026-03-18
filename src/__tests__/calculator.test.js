@@ -1,4 +1,4 @@
-const { add, subtract, multiply, divide } = require("../calculator");
+const { add, subtract, multiply, divide, power, mod } = require("../calculator");
 
 describe("Calculator", () => {
   describe("add", () => {
@@ -31,6 +31,24 @@ describe("Calculator", () => {
     });
     test("throws on division by zero", () => {
       expect(() => divide(10, 0)).toThrow("Division by zero");
+    });
+  });
+
+  describe("power", () => {
+    test("calculates power", () => {
+      expect(power(2, 3)).toBe(8);
+    });
+    test("power of zero", () => {
+      expect(power(5, 0)).toBe(1);
+    });
+  });
+
+  describe("mod", () => {
+    test("calculates modulo", () => {
+      expect(mod(10, 3)).toBe(1);
+    });
+    test("throws on modulo by zero", () => {
+      expect(() => mod(10, 0)).toThrow("Modulo by zero");
     });
   });
 });
