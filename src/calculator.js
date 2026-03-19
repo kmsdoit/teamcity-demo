@@ -28,4 +28,15 @@ function mod(a, b) {
   return a % b;
 }
 
-module.exports = { add, subtract, multiply, divide, power, mod };
+function sqrt(a) {
+  if (a < 0) {
+    throw new Error("Cannot calculate square root of negative number");
+  }
+  return Math.sqrt(a);
+}
+
+function abs(a) {
+  return Math.abs(a);
+}
+
+module.exports = { add, subtract, multiply, divide, power, mod, sqrt, abs };
